@@ -6,12 +6,17 @@ class Util():
       with open(file) as f:
         for line in f:
           print line,
-def show():
-  print """
+
+class FriendlyCat():
+  def __init__(self, friend_name):
+    self.friend = friend_name
+
+  def show(self):
+    print """
  /\     /\\
 {  `---'  }
 {  O   O  }
-~~>  V  <~~
+~~>  V  <~~   Hello, %s
  \  \|/  /
   `-----'__
   /     \  `^\_
@@ -20,4 +25,4 @@ def show():
   \__/  /(_E     \__/
     (  /
      MM
-     """
+     """%self.friend
